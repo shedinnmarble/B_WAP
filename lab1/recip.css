@@ -1,0 +1,40 @@
+body{
+	width: 960px;
+	margin: 0 auto;
+}
+#band{
+	color: rgb(164,164,0);
+	text-decoration: underline;
+	text-align: center;
+}
+#pieKinds{
+	list-style: none;
+	padding-left: 0px;
+}
+#header,#ingredients,#directions,#comments,#links{
+	border-bottom: 1px solid black;
+}
+div>h3{
+	color: rgb(164,164,0);
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+
+.detailStep{
+	list-style-type: circle;
+}
+#comments p{
+	background-color: rgb(255,255,168);
+}
+#comments .author{
+	margin-top: 1em;
+	display: block;
+}
+#links a{
+	display: block;
+	color: rgb(164,164,0);
+}
+#footer{
+	text-align: right;
+}
