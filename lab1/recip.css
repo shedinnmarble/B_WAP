@@ -1,6 +1,7 @@
 body{
 	width: 960px;
 	margin: 0 auto;
+	
 }
 #band{
 	color: rgb(164,164,0);
@@ -10,9 +11,14 @@ body{
 #pieKinds{
 	list-style: none;
 	padding-left: 0px;
+
 }
 #header,#ingredients,#directions,#comments,#links{
 	border-bottom: 1px solid black;
+	background-image:url("images/silverware.jpg")
+}
+#ingredients,.detailStep{
+		list-style-image:url("images/pie_icon.gif");
 }
 div>h3{
 	color: rgb(164,164,0);
