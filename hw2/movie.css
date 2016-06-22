@@ -1,0 +1,40 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url("images/background.png");
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 8pt;
+}
+.contanier{
+	width: 800px;
+	border: 1px solid red;
+	border-radius: 100;
+	margin: 0 auto;
+}
+.header{
+	text-align: center;
+}
+.header h1{
+	font-size: 24px;
+	font-family:Tahoma, Verdana,sans-serif;
+	text-shadow: 3px 3px #999999;
+}
+.banner{
+	background-image: url("images/bannerbg.png");
+}
+.rightBar{
+	float: right;
+	width: 250px;
+	background-color: #A2B964;
+}
+.leftContainer{
+	width: 550px;
+	float: left;
+}
+.reviews{
+	width: 47%;
+	float: left;
+}
+.footer{
+	clear: both;
+}
