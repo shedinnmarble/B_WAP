@@ -46,24 +46,38 @@ body{
 .leftContainer .rotten{
 	background-image: url("images/rbg.png");
 	background-repeat: repeat-x;
+	border-top-left-radius: 5px;
+	height: 83px;
 	
 	
+}
+.leftContainer .rotten img{
+	border-top-left-radius: 5px;
+	border:0;
+	float: left;
 }
 .leftContainer .rotten #number{
-	background-image: url("images/rottenbig.png");
-	background-repeat: no-repeat;
+		
 	font-size: 63px;
 	color: red;
-	padding-left: 91px;
-	
+	padding: 12px;
+	float: left;
 	
 }
-.reviews{			
+.clear{
+	clear: left;
+}
+.leftContainer .col-6{
 	width: 47%;
+	height: auto;
+	float: left;
+}
+.reviews{			
+	
 	float: left;
 	position: relative;
-	margin-left: auto;
-	/*margin: 2%;*/
+	height: auto;
+	
 }
 .reviews .quote {
 	background-color: #E8DC9B;
