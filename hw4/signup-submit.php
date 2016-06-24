@@ -13,7 +13,7 @@ echo "<p>Welcome to NerdLuv11, $name,$gender,$age,$personalityType,$favorateOS,$
 $newSingle="\r\n$name,$gender,$age,$personalityType,$favorateOS,$ageFrom,$ageTo";
 try
 {
-$myfile = fopen("singles.txt", "w"); //or die("Unable to open file!");
+$myfile = fopen("singles.txt", "a") or die("Unable to open file!");
 }catch(Exception $e){
 	print_r($e);die();
 }

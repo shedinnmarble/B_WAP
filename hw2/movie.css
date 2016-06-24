@@ -113,6 +113,10 @@ body{
 	background-color: #A2B964;
 	/*padding-top: 5px;*/
 	clear: both;
+	float: left;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
 }
 .w3c{
 	position: fixed;
