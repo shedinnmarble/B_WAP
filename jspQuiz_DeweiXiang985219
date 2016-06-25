@@ -1,0 +1,24 @@
+1. What is the difference between a web server and a web container?
+	web server contains web container, web container must hosted by a web server.
+2. What is a servlet?
+A servlet is a Java class that extends the capabilities of
+servers that host applications access by means of a
+request-response programming model.
+3. How do web servers and web containers interact with servlets?
+	web server has web containers, and web containers can call servlets.
+4. Who creates request objects?
+the web server .
+5. What are the states in the servlet lifecycle?
+1. load serrvlet class
+2. instantiate servlet
+3. init()
+4. service()
+5. destroy()
+6. Who calls init and when? 
+the webserver calls it once when the selvelt is first put into service.
+7. Which of init, service, and doGet should you override?
+	any of them can be override, but normally, we override doGet()
+8. In what sense are servlets multi-threaded?
+when mutil request comes
+9. What are the implications of this for servlet instance variables? 
+ these instance variables used by selvlet its self

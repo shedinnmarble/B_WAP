@@ -9,9 +9,14 @@ import static com.sun.faces.util.CollectionsUtils.map;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +28,121 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "CalculatorImproved", urlPatterns = {"/CalculatorImproved"})
 public class CalculatorImproved extends HttpServlet {
+
+    @Override
+    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+        super.service(req, res); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.service(req, resp); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void doTrace(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doTrace(req, resp); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doOptions(req, resp); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doDelete(req, resp); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPut(req, resp); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void doHead(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doHead(req, resp); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected long getLastModified(HttpServletRequest req) {
+        return super.getLastModified(req); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getServletName() {
+        return super.getServletName(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void log(String message, Throwable t) {
+        super.log(message, t); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void log(String msg) {
+        super.log(msg); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void init() throws ServletException {
+        super.init(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ServletContext getServletContext() {
+        return super.getServletContext(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ServletConfig getServletConfig() {
+        return super.getServletConfig(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Enumeration<String> getInitParameterNames() {
+        return super.getInitParameterNames(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getInitParameter(String name) {
+        return super.getInitParameter(name); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode(); //To change body of generated methods, choose Tools | Templates.
+    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
