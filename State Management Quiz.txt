@@ -1,0 +1,24 @@
+State Management Quiz
+1. Can post requests be bookmarked? What are the problems?
+No, the data sended by post is not in url, but the bookmark only store the url
+2. What is the purpose of request dispatching?
+
+3. What is the difference between redirect and request dispatch?
+4. What is an attribute ?
+An object bound into one of the three servlet API objects:HttpSelvetRequest, HttpSession, SelvetContext
+5. What is the difference between attributes and parameters?
+6. What are dangers of using attributes?
+some attributes can be accessed by the global level, it's not thread safe.
+7. What does it mean to say that http is stateless? Give an example of a stateful protocol.
+
+8. Give 5 different methods for maintaining state information (count each attribute scope as one
+method).
+
+9. How long does a session last?
+it depends on the setting of the server, normally is 20 minutes
+10. What is a cookie, and how long does a cookie last?
+cookie is a bit of data from web server and stored in browser.
+ecah cookie has a name and value and an expired date, the cookie will be expired after the expired date.
+11. What is the purpose of URL rewriting?
+
+12. Why does the request attribute report ‘null’ for the maintaining state demo?
