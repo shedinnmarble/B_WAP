@@ -2,17 +2,30 @@ State Management Quiz
 1. Can post requests be bookmarked? What are the problems?
 No, the data sended by post is not in url, but the bookmark only store the url
 2. What is the purpose of request dispatching?
-
+A RequestDispatcher object can forward a client's request to a resource or include the resource itself in the response back to the client. A resource can be another servlet, or an HTML file, or a JSP file, etc.
 3. What is the difference between redirect and request dispatch?
+If you use RequestDispatcher, you can forward the HttpRequest and HttpResponse objects to the destination servlet or JSP page. Whereas when you use sendRedirect, the request and response objects are lost and it is a mere redirection to another page.
+
 4. What is an attribute ?
 An object bound into one of the three servlet API objects:HttpSelvetRequest, HttpSession, SelvetContext
 5. What is the difference between attributes and parameters?
+parameters com from the client request, attribute are set by the server side.
+
 6. What are dangers of using attributes?
 some attributes can be accessed by the global level, it's not thread safe.
+
 7. What does it mean to say that http is stateless? Give an example of a stateful protocol.
+Because a stateless protocol does not require the server to retain session information or status about each communications partner for the duration of multiple requests. HTTP is a stateless protocol, which means that the connection between the browser and the server is lost once the transaction ends.
 
 8. Give 5 different methods for maintaining state information (count each attribute scope as one
 method).
+ 1. request scope: destroyed when servlet finishes processing request
+ 2. session scope: destroyed when user closes browser
+ 3. application scope destroyed when Container stopped.
+ 4. Cookies saved on browser,
+temporary (deleted when the browser closes)
+permanent
+ 5. Hidden fields on a form
 
 9. How long does a session last?
 it depends on the setting of the server, normally is 20 minutes
@@ -20,5 +33,7 @@ it depends on the setting of the server, normally is 20 minutes
 cookie is a bit of data from web server and stored in browser.
 ecah cookie has a name and value and an expired date, the cookie will be expired after the expired date.
 11. What is the purpose of URL rewriting?
+URL rewriting is another way to support anonymous session tracking. With URL rewriting, every local URL the user might click on is dynamically modified, or rewritten, to include extra information. 
 
 12. Why does the request attribute report ‘null’ for the maintaining state demo?
+Because setAttrbute scope is short and within the method
