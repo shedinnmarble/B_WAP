@@ -62,8 +62,10 @@ public class QuizServelet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession s = request.getSession();
-        s.setAttribute("score", 0);
-        generateForm(request, response, 0, false);
+      Quiz quiz=  new Quiz();
+      quiz.setScore(0);
+        s.setAttribute("quiz",quiz);
+       Quiz.generateForm(request, response, 0, false);
 
     }
 
@@ -78,7 +80,7 @@ public class QuizServelet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+          Quiz.doPost(request, response);
 
         //processRequest(request, response);
     }
