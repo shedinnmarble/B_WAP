@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Improved Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   <body>
+        <form action="CalculatorImproved" method="post" id="myForm">
+        <div class="plus">
+            <p><input type="text" value="" name="plusA"><span>+</span>
+                <input type="text" value="" name="plusB">
+                <span>=</span><input type="text" id="plusResult"/>
+                </p>
+        </div>
+         <div class="multiply">
+            <p><input type="text" value="" name="multiplyA"><span>*</span>
+                <input type="text" value="" name="multiplyB">
+               <span>=</span><input type="text" id="multiplyResult"/>
+            </p>
+        </div>
+        <div><input type="button" value="Submit" id="submit"/></div>
+        <div id="result"></div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            $(function(){
+               $("#submit").click(function(){
+                   // alert("");
+                    $.ajax({
+                        type:"post",
+                        url:"CalculatorImproved",
+                        data:$("#myForm").serialize(),
+                        success:function(data){
+                           $("#result").html(data);
+                        }
+                    })
+            
+               })
+            })
+        </script>
+    </body>
+</html>

@@ -49,7 +49,6 @@
             <input type="submit" value="submit">
             <input type="hidden" value="<%=q.getqIndex()%>" name="qIndex">
             <%} else {%>
-
             <p>you have finished the Number Quiz, your score is <%=q.getScore()%> out of <%=q.getQuestionNumber()%></p>
             <%}%>
         </form>
