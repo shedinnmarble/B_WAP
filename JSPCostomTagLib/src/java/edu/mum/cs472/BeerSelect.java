@@ -30,6 +30,7 @@ public class BeerSelect extends HttpServlet {
         List result = be.getBrands(c);
 
         req.setAttribute("styles", result);
+//         resp.sendRedirect("index.html");
         RequestDispatcher view = req.getRequestDispatcher("result.jsp");
         view.forward(req, resp);
 

@@ -36,11 +36,16 @@ String words;
     @Override
     public void doTag() throws JspException, IOException {
         JspWriter out=getJspContext().getOut();
+      
+          getJspBody().invoke(out);
         if(thecolor!=null){
         out.write(String.format("<h1 style='color:%s'>%s</h1>", this.thecolor,this.words));
         }else{
          out.write(String.format("<h1>%s</h1>",this.words));
         }
+        out.print("<span>shit</span>");
+     
+        out.print("<span>shit2</span>");
     }
     
 }

@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="mytag" uri="/WEB-INF/tlds/HEAD.tld" %>
+<%= pageContext.findAttribute("")%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +15,7 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <mytag:Head thecolor="red" words="This is costom Tag for h1, with color attribute"/>
-        <mytag:Head words="This is costom Tag for h1, without color attribute"/>
+      
+        <mytag:Head thecolor="red" words="hehe"/>
     </body>
 </html>
