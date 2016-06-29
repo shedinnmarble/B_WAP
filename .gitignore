@@ -10,3 +10,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/QuizServeletLab/nbproject/private/
+/QuizServeletLab/build/
+/QuizServeletLab/dist/
+/JSPQuizServeletLab/nbproject/private/
+/JSPQuizServeletLab/build/
+/JSPTagDemo/nbproject/private/
+/JSPTagDemo/build/
+/ForEachDemo/nbproject/private/
+/ForEachDemo/build/
