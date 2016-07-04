@@ -1,7 +1,12 @@
 window.onload = function() {
+    var timer = null;
     document.getElementById("bigger").onclick = function() {
-
-        var i = setInterval(setFontSize, 500)
+        if (timer == null) {
+            timer = setInterval(setFontSize, 500)
+        } else {
+            clearInterval(timer);
+            timer = setInterval(setFontSize, 500)
+        }
 
         function setFontSize() {
             var currentSize = document.getElementById("textArea").style.fontSize;
@@ -33,18 +38,18 @@ window.onload = function() {
             var text = document.getElementById("textArea");
             var words = text.value.split(" ");
             for (var i = 0; i < words.length; i++) {
-            		var word=words[i];
-            		var pattern=/^[b-df-hj-np-tv-z]+/i;
-            		if(pattern.test(word)){
-            			var matched=pattern.exec(word);
-            			//alert(matched+"--")
-            			var temp=word.replace(pattern,'');
-            			//alert(temp)
-            			var newWord=temp+matched+"-ay";
-            			words[i]=newWord;
-            		}           		
+                var word = words[i];
+                var pattern = /^[b-df-hj-np-tv-z]+/i;
+                if (pattern.test(word)) {
+                    var matched = pattern.exec(word);
+                    //alert(matched+"--")
+                    var temp = word.replace(pattern, '');
+                    //alert(temp)
+                    var newWord = temp + matched + "-ay";
+                    words[i] = newWord;
+                }
             }
-            text.value=words.join(" ");
+            text.value = words.join(" ");
         }
         //Malkovich process
     document.getElementById("malkovitch").onclick = function() {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> ASCII Animation Viewer</title>
+	<link rel="stylesheet" type="text/css" href="ascii.css">
+</head>
+<body>
+	<div class="ascii">
+		<h1 id="head">CSE 190 M ASCII Animation Viewer</h1>
+		<textarea cols="80" rows="20" id="text">
+
+		</textarea>
+		<div class="control">
+			<fieldset class="controls">
+				<legend>Play Controls:</legend>
+				<div>
+				<button id="start">Start</button>
+				<button id="stop">Stop</button>
+				</div>
+			</fieldset>
+			<fieldset class="controls">
+				<legend>Animation:</legend>
+				<div>
+					<select id="animation">
+						<option>Blank</option>
+						<option>Exercise</option>
+						<option>Juggler</option>
+						<option>Bike</option>
+						<option>Dive</option>
+						<!-- <option>Costom</option> -->
+					</select>
+				</div>
+			</fieldset>
+			<fieldset class="controls">
+				<legend>Size:</legend>
+				<div>
+					<select id="size">
+						<option value="7pt">Tiny</option>
+						<option value="10pt">Small</option>
+						<option value="12pt" selected="selected">Medium</option>
+						<option value="16pt">Large</option>  
+						<option value="24pt">Extra Large</option>
+						<option value="32pt">XXL</option>
+					</select>
+				</div>
+			</fieldset>
+			<fieldset class="controls">
+				<legend>Speed:</legend>
+				<div>
+				<input type="checkbox" id="turbo">Turbo
+				</div>
+			</fieldset>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="animations.js"></script>
+	<script type="text/javascript" src="ascii.js"></script>
+</body>
+</html>

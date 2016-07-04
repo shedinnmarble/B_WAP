@@ -1,0 +1,31 @@
+body{
+	background-color: #CCCCFF;
+	font-family: sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.ascii{
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+#head{
+	font-size: 32pt;
+	margin: 0px;
+	
+}
+#text{
+	width: 90%;
+	height: 400px;
+	font-weight: bold;
+	font-family: monospace;
+}
+#start,#stop,#animation,#size{
+	font-weight: bold;
+}
+.controls{
+	border:5px solid black;
+	display: inline;
+	vertical-align: center;
+	
+}
