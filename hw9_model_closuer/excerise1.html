@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Excerise 1</title>
+	<script type="text/javascript">
+		var rudyTimer=(function(){
+		var timer = null;  // stores ID of interval timer
+		var delayMsg2=function () {
+			if (timer == null) {
+				timer = setInterval(rudy, 1000);
+			} else {
+				clearInterval(timer);
+				timer = null;
+			}
+		}
+		function rudy() {   // called each time the timer goes off
+			document.getElementById("output").innerHTML += " Rudy!";
+			}
+		return{
+				delayMsg2:delayMsg2
+		}
+
+})();
+
+
+</script>
+</head>
+<body>
+	<button onclick="rudyTimer.delayMsg2();" >Click Me!</button>
+	<span id="output"></span>
+</body>
+</html>
