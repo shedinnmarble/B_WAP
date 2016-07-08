@@ -1,25 +1,35 @@
-"use strict";
+
 var myAnmi = function() {
+    "use strict";
     var timer;
     var index = 0;
     var speed = 250;
-    var animationData = ANIMATIONS["Dive"];
+    var animationData = ANIMATIONS['Dive'];
     var text = document.getElementById("text");
-    var array = animationData.split("=====\n")
+    var array = animationData.split("=====\n");
     document.getElementById("stop").disabled = true;
 
     function setText() {
         timer = setInterval(function() {
             text.value = array[index];
-            index++;
+            index+=1;
             if (index >= array.length) {
                 index = 0;
             }
-        }, speed)
+        }, speed);
     }
 
-    function doAnimation(speed) {
-        if (timer == null) {
+    function stop() {
+        clearInterval(timer);
+        text.value=animationData;
+        document.getElementById("start").disabled = false;
+        document.getElementById("stop").disabled = true;
+        document.getElementById("animation").disabled = false;
+        document.getElementById("size").disabled = false;
+        //document.getElementById("turbo").disabled = true;
+    }
+    function doAnimation() {
+        if (timer === null) {
             setText();
         } else {
             stop();
@@ -32,15 +42,7 @@ var myAnmi = function() {
         //document.getElementById("turbo").disabled = false;
     }
 
-    function stop() {
-        clearInterval(timer);
-        text.value=animationData;
-        document.getElementById("start").disabled = false;
-        document.getElementById("stop").disabled = true;
-        document.getElementById("animation").disabled = false;
-        document.getElementById("size").disabled = false;
-        //document.getElementById("turbo").disabled = true;
-    }
+
 
     function changeAnimination() {
         var anmi = document.getElementById("animation");
@@ -85,14 +87,15 @@ var myAnmi = function() {
                 doAnimation(speed);
             }
         }
-    }
+    };
 
-}
+};
 window.onload = function() {
+    "use strict";
     var animation = myAnmi();
     document.getElementById("start").onclick = animation.startOnlick;
     document.getElementById("stop").onclick = animation.stopOnclick;
     document.getElementById("animation").onchange = animation.animationOnchange;
     document.getElementById("size").onchange = animation.sizeOnchange;
     document.getElementById("turbo").onclick = animation.turboOnclick;
-}
+};
