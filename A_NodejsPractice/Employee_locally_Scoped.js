@@ -2,6 +2,7 @@ var Employee=(function(){
 	var name;
 	var age=0;
 	var salary=0;
+	var myObject={};
 	var getAge=function (){
 		return age;
 	}
@@ -11,33 +12,26 @@ var Employee=(function(){
 	var getName=function (){
 		return name;
 	}
-	var setAge=function(newAge){
+	myObject.setAge=function(newAge){
 		age=newAge;
 		// console.log(age+":::age")
 	}
-	var setName=function(newName){
+	myObject.setName=function(newName){
 		name=newName;
 		// console.log(name)
 	}
-	var setSalary=function(newSalary){
+	myObject.setSalary=function(newSalary){
 		salary=newSalary;
 	}
-	var increaseSalary=function(percentage){		
-		 setSalary(salary+salary*percentage)
+	myObject.increaseSalary=function(percentage){		
+		 salary=(salary+salary*percentage)
 		 return getSalary()
 	}
-	var incremeentAge=function(){
-		setAge(getAge()+1)
+	myObject.incremeentAge=function(){
+		age=(getAge()+1)
 		return getAge();
 	}
-	return {
-		setAge:setAge,
-		setSalary:setSalary,
-		setName:setName,
-		// getName:getName,
-		incremeentAge:incremeentAge,
-		increaseSalary:increaseSalary
-	}
+	return myObject;
 })();
 
 Employee.setName("dewei");
