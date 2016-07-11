@@ -62,8 +62,9 @@
              return true;
          }
          if (Math.abs(tileTop - emptyTop) == 100 && tileLeft == emptyLeft)  {
-             return false;
+             return true;
          }
+         return false;
      };
      var shuffle = function(array) {
          var currentIndex = array.length,
