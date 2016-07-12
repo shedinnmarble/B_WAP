@@ -8,3 +8,7 @@ and open the template in the editor.
     Author     : 985219
 */
 
+#word{
+    width: 200px;
+    display: inline-block;
+}
