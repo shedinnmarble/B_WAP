@@ -14,15 +14,13 @@ and open the template in the editor.
 }
 #ajaxLoading{
     display: none;
-    height: 400px;
+    height: 100px;
+    width: 100px;
     z-index: 10000;
-    /*position: relative;*/
-    position: absolute;
-    /*background-color: gray;  for demonstration */
 }
 #ajaxLoading img{
     width: 100px;
-
+  position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -32px; /* -1 * image width / 2 */

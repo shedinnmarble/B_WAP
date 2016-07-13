@@ -55,7 +55,7 @@ public class DbConnection {
 
     public static String resultSetToJson(String word) {
         try {
-            Thread.sleep(8000);
+//            Thread.sleep(8000);
         } catch (Exception e) {
         }
         Connection connection = getConnection();
