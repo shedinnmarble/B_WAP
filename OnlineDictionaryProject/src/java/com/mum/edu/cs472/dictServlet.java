@@ -30,16 +30,8 @@ public class dictServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter pt = resp.getWriter();
         String word = req.getParameter("word");
-        try {
-
-            ResultSet rs = DbConnection.getWords(word);
-            JSONArray arr = convertToJSON(rs);
-            JSONParser jSONParser = new JSONParser();
-
-            pt.print(arr.toString());
-        } catch (Exception e) {
-            pt.println(e);
-        }
+      String json=DbConnection.resultSetToJson(word);
+      pt.write(json);
     }
 
     public static JSONArray convertToJSON(ResultSet resultSet)
